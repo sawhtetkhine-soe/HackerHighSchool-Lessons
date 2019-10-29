@@ -1,10 +1,10 @@
 Portscanning
 
 #Light Scan
-nmap -v -Pn -sS -T4 -R -O -F --version-light 192.168.25.157 -oA pwnOSv1-light.txt
+nmap -v -Pn -sS -T4 -R -O -F --version-light 192.168.25.157 -oA output.txt
 
 #Heavy Scan
-nmap -v -Pn -p- -T4 -sV --reason --max-retries 1 192.168.25.157 -oA PwnOSv1_allport.txt
+nmap -v -Pn -p- -T4 -sV --reason --max-retries 1 192.168.25.157 -oA allport.txt
 
 #Service Scan
 nmap -v -Pn -sV -p22,80,139,445,10000 --reason 192.168.25.157 -oA pwnOSv1-Service.txt
