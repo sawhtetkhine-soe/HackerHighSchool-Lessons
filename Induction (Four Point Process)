@@ -1,0 +1,24 @@
+Portscanning
+
+#Light Scan
+nmap -v -Pn -sS -T4 -R -O -F --version-light 192.168.25.157 -oA pwnOSv1-light.txt
+
+#Heavy Scan
+nmap -v -Pn -p- -T4 -sV --reason --max-retries 1 192.168.25.157 -oA PwnOSv1_allport.txt
+
+#Service Scan
+nmap -v -Pn -sV -p22,80,139,445,10000 --reason 192.168.25.157 -oA pwnOSv1-Service.txt
+
+
+
+#OS Detection
+nmap -v -Pn -A --reason 192.168.25.157 -oA lightweight_OS.txt
+
+
+#Common Vuln Scan
+nmap -v -Pn --script vuln -p 192.168.25.157 -oA pwnOSv1_comvuln.txt
+
+
+#scan with ssh brute nse script
+nmap -p 22 --script ssh-brute --script-args ssh-brute.timeout=4s help -oA pwnOSv1_ssh-brute
+
